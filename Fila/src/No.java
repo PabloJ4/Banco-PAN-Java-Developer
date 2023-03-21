@@ -1,8 +1,18 @@
-public class No {
+public class No <T>{
 
 
-    private Object object;
-    private No refNo;
+    private T object;
+    public Object getObject() {
+        return object;
+    }
+
+
+    public void setObject(T object) {
+        this.object = object;
+    }
+
+
+    private No<T> refNo;
 
 
 
@@ -22,10 +32,17 @@ public class No {
     }
 
 
-    public No(Object object){
+    public No(T object){
 
         this.refNo = null;
         this.object = object;
+    }
+
+    @Override
+    public String toString(){
+        return "No{" +
+               "object=" + object +
+               '}';
     }
     
 }
